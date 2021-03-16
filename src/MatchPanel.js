@@ -35,7 +35,7 @@ export default class extends Component {
                     alt={this.props.playerOneCiv}
                     title={this.props.playerOneCiv}
                     src={
-                      "https://aoe2techtree.net/img/Civs/" +
+                      "https://thbrown.github.io/aoe2-de-random-elo/civs/" + // TODO: this should really be PUBLIC_URL somehow
                       this.props.playerOneCiv.toLowerCase() +
                       ".png"
                     }
@@ -65,7 +65,9 @@ export default class extends Component {
                     alt={this.props.playerTwoCiv}
                     title={this.props.playerTwoCiv}
                     src={
-                      "/civs/" + this.props.playerTwoCiv.toLowerCase() + ".png"
+                      "https://thbrown.github.io/aoe2-de-random-elo/civs/" +
+                      this.props.playerTwoCiv.toLowerCase() +
+                      ".png"
                     }
                   ></img>
                   <div>
