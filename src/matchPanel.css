@@ -1,32 +1,81 @@
 td {
-  padding: 8px;
+  padding: 4px;
 }
 
-.matchContainer {
+.match-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  border: 2px solid black;
+  border: 2px solid #616161;
   border-radius: 8px;
-  padding: 8px
+  padding: 8px;
+  margin: 8px 0;
 }
 
-.mapName { 
+.match-info-container {
+  flex-grow: 1;
+}
+
+.map-name { 
   margin: 0;
 }
 
-.spectateGame {
-  color: inherit;
+.civ-logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 4px;
+}
+
+.both-player-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 8px;
+  justify-content: space-between;
+}
+
+.player-name-container {
+  display: flex;
+  align-items: center;
+}
+
+.player-container a {
+  color: black;
   text-decoration: none;
 }
 
-.smallButton {
-    background-color: #4caf50;
-    border: none;
+.player-container a:hover {
+  text-decoration: underline;
+}
+
+.versus {
+  width: 40px;
+  line-height: 30px; /* civ-logo height */
+  text-align: center;
+}
+
+.ratings-container {
+  margin-left: 34px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.spectate-game {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  width: 90px;
+}
+
+.match-button-container {
+  flex-basis: 130px;
+  margin-left: 8px;
+}
+
+.match-option-button {
     border-radius: 4px;
-    color: white;
-    font-family: inherit;
     font-size: 12px;
     padding: 8px 16px;
-    margin: 6px 4px;
+    margin: 4px;
 }

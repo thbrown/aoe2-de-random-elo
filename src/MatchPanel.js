@@ -6,53 +6,91 @@ export default class extends Component {
   constructor(props) {
     super();
 
-    this.toggleRatings = function (event) {
-      let ratingsElement = document.getElementById("ratings");
-      let ratingsToggleButtonElement = document.getElementById(
-        "ratingsToggleButton"
-      );
+    this.state = {
+      showRatings: false,
+    };
 
-      if (ratingsElement.classList.contains("none")) {
-        ratingsElement.classList.remove("none");
-        ratingsToggleButtonElement.innerText = "Hide Ratings";
+    this.toggleRatings = function (event) {
+      if (this.state.showRatings) {
+        this.setState({ showRatings: false });
       } else {
-        ratingsElement.classList.add("none");
-        ratingsToggleButtonElement.innerText = "Unhide Ratings";
+        this.setState({ showRatings: true });
       }
     }.bind(this);
   }
 
   render() {
     return (
-      <div className="App">
-        <div className="matchContainer">
-          <div>
-            <table>
-              <tr>
-                <td colSpan="3">
-                  <h3 className="mapName">{this.props.map}</h3>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  {this.props.playerOneCiv} - {this.props.playerOneName}
-                </td>
-                <td>vs.</td>
-                <td>
-                  {this.props.playerTwoCiv} - {this.props.playerTwoName}
-                </td>
-              </tr>
-              <tr id="ratings" className="none">
-                <td>{this.props.playerOneRating}</td>
-                <td></td>
-                <td>{this.props.playerTwoRating}</td>
-              </tr>
-            </table>
+      <div>
+        <div className="match-container">
+          <div className="match-info-container">
+            <div>
+              <h3 className="map-name">{this.props.map}</h3>
+            </div>
+            <div className="both-player-container">
+              <div className="player-container">
+                <div className="player-name-container">
+                  <img
+                    className="civ-logo"
+                    alt={this.props.playerOneCiv}
+                    title={this.props.playerOneCiv}
+                    src={
+                      "https://aoe2techtree.net/img/Civs/" +
+                      this.props.playerOneCiv.toLowerCase() +
+                      ".png"
+                    }
+                  ></img>
+                  <div>
+                    <a
+                      href={`https://aoe2.net/#profile-${this.props.playerOneId}`}
+                    >
+                      {this.props.playerOneName}
+                    </a>
+                  </div>
+                </div>
+                <div
+                  className={
+                    "ratings-container " +
+                    (this.state.showRatings ? "" : "hidden")
+                  }
+                >
+                  {this.props.playerOneRating}
+                </div>
+              </div>
+              <div className="versus">vs.</div>
+              <div className="player-container">
+                <div className="player-name-container">
+                  <img
+                    className="civ-logo"
+                    alt={this.props.playerTwoCiv}
+                    title={this.props.playerTwoCiv}
+                    src={
+                      "/civs/" + this.props.playerTwoCiv.toLowerCase() + ".png"
+                    }
+                  ></img>
+                  <div>
+                    <a
+                      href={`https://aoe2.net/#profile-${this.props.playerTwoId}`}
+                    >
+                      {this.props.playerTwoName}
+                    </a>
+                  </div>
+                </div>
+                <div
+                  className={
+                    "ratings-container " +
+                    (this.state.showRatings ? "" : "hidden")
+                  }
+                >
+                  {this.props.playerTwoRating}
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <div className="smallButton">
+          <div className="match-button-container">
+            <div>
               <a
-                className="spectateGame"
+                className="spectate-game button match-option-button"
                 href={`https://aoe2.net/s/${this.props.matchId}`}
               >
                 Spectate in DE
@@ -60,11 +98,13 @@ export default class extends Component {
             </div>
             <div>
               <button
-                id="ratingsToggleButton"
-                className="smallButton"
+                style={{
+                  width: "122px",
+                }}
+                className="button match-option-button"
                 onClick={this.toggleRatings}
               >
-                Unhide Ratings
+                {this.state.showRatings ? "Hide Ratings" : "Unhide Ratings"}
               </button>
             </div>
           </div>

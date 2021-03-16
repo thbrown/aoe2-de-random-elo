@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Red Hat Text
+- Font Author: Copyright 2019 The Red Hat Project Authors (https://github.com/RedHatOfficial/RedHatFont)
+- Font Source: http://fonts.gstatic.com/s/redhattext/v3/RrQXbohi_ic6B3yVSzGBrMxgb60sE8yZPA.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL)

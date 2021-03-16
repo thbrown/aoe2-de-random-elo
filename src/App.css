@@ -1,27 +1,60 @@
-.App {
-  /* text-align: center; */
+.footer {
+  font-size: 12px;
+  margin-bottom: 12px;
 }
 
 .button {
   background-color: #4caf50;
   border: none;
   color: white;
+  font-family: inherit;
+  outline: none;
+  cursor: pointer;
+}
+
+.big-button {
   padding: 16px 32px;
   border-radius: 8px;
   font-size: 16px;
-  margin: 12px 8px;
-  font-family: inherit;
+  margin: 12px 0;
+  width: 305px;
+  height: 52px;
 }
 
 .none {
   display: none;
 }
 
+.options-pane {
+  padding: 14px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 400px;
+  border: 1px #757575 solid;
+  border-radius: 4px;
+}
+
+.options-pane input {
+  border: 1px solid #BDBDBD;
+  border-radius: 4px;
+  width: 60px;
+  padding: 4px 8px;
+  margin: 8px 0;
+}
+
 /* Loading animation stuff 8 */
 
+.outer-loading-spinner {
+  z-index: 1;
+  margin: 0 auto auto auto;
+  width: 8%;
+  height: 20px;
+}
+
 .loading-spinner {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   position: relative;
   animation: sk-chase 2.5s infinite linear both;
 }
