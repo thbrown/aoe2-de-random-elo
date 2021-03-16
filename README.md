@@ -4,7 +4,9 @@ Playing Guess the elo? Selecting a "random" game from the ongoing matches wont g
 
 This tool attempts to solve this issue by first selecting a random game with an avg rating between two values (500 and 2000 by default). Then it selects the closest ongoing game to that rating. You can select multiple games in the manner with a single query. You can also see the players and civs before clicking spectate, just in case you want to skip over specific civ matchup or you recognize the players.
 
-Live: https://github.com/thbrown/aoe2-de-random-elo
+Live: https://thbrown.github.io/aoe2-de-random-elo/
+
+## Dev Stuff
 
 ### `yarn start`
 
