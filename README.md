@@ -8,6 +8,8 @@ Live: https://thbrown.github.io/aoe2-de-random-elo/
 
 ## Dev Stuff
 
+### 'yarn install'
+
 ### `yarn start`
 
 Runs the app in the development mode.\
